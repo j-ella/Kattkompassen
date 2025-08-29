@@ -4,7 +4,11 @@
   --background-color: #fdf6f0;
   --primary-color: #dc9999;
   --secondary-color: #c9b6a96c;
+  --brighter-secondary-color: hsl(19, 16%, 20%, 5%);
   --accent-color: #e9c9a5;
+
+  --font-heading: "Quicksand", sans-serif;
+  --font-body: "Poppins", sans-serif;
 
   /* Extra variabler */
   --button-radius: 8px;
@@ -34,17 +38,18 @@ li,
 span {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  line-height: 2.25;
 }
 
 /* Länkar */
 a {
-  color: var(--primary-color);
+  color: var(--text-color);
   text-decoration: none;
   transition: color var(--transition-speed);
 }
 
 a:hover {
-  color: var(--accent-color);
+  color: var(--primary-color);
 }
 
 /* Primära knappar */
@@ -93,4 +98,103 @@ a:hover {
   padding: 20px;
   margin: 10px 0;
   border-radius: var(--button-radius);
+}
+
+/* header css*/
+.header-custom {
+  border-bottom: 1px solid var(--secondary-color);
+  padding: 0.5rem 0;
+}
+
+.header-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-container {
+  margin-left: 20rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-dark);
+  padding: 0.5rem;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+#logo-header {
+  width: 256px;
+  height: 82.5px;
+}
+
+/* footer css*/
+.footer-custom {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.footer-container {
+  width: 70%;
+  background-color: var(--brighter-secondary-color);
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.footer-utforska {
+  list-style: none;
+  display: flex;
+  margin-top: 0.5rem;
+  margin-left: 25rem;
+}
+
+.footer-hitta {
+  list-style: none;
+  display: flex;
+  margin-top: 0.5rem;
+  margin-left: 10rem;
+}
+
+.footer-utforska ul,
+.footer-hitta ul {
+  list-style: none;
+}
+
+.footer-utforska li,
+.footer-hitta li {
+  margin-top: 0.5em;
+}
+
+.footer-utforska a,
+.footer-hitta a {
+  font-family: var(--font-body);
+  line-height: 2.25;
+}
+
+.footer-utforska a:hover,
+.footer-hitta a:hover {
+  color: var(--primary-color);
+}
+
+#logo-footer {
+  width: 128px;
+  height: 128px;
+  margin-left: 4rem;
+  margin-top: 0.5rem;
 }
