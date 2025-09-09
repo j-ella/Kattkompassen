@@ -134,16 +134,17 @@ a:hover {
 }
 
 /* Primära knappar */
-.btn {
+.btn,
+.button-primary {
+  all: unset; /* tar bort nästan alla browserdefault */
+  font-family: var(--font-body);
   padding: 1.2rem 1.5rem;
   border-radius: 10px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.button-primary {
+  cursor: pointer;
+  text-align: center;
   background-color: var(--primary-color);
   color: var(--text-color);
+  transition: 0.3s;
 }
 
 .button-primary:hover {
