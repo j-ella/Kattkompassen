@@ -66,6 +66,37 @@ h5 {
   font-size: var(--h5);
   font-weight: 400;
 }
+.h1-color-effect[data-astro-cid-j7pv25f6] {
+  font-family: var(--font-heading);
+  font-size: var(--h1);
+  letter-spacing: 0;
+  font-weight: 700;
+  background: linear-gradient(
+    120deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 0;
+}
+
+.h2-color-effect[data-astro-cid-j7pv25f6] {
+  font-family: var(--font-heading);
+  font-size: var(--h2);
+  letter-spacing: 0;
+  font-weight: 700;
+  background: linear-gradient(
+    120deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 0;
+}
 
 p,
 li,
@@ -73,6 +104,22 @@ span {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 2.25;
+}
+
+.textblock {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid var(--secondary-color);
+}
+
+.textblock p {
+  font-size: 1.1rem;
+}
+
+.textblock a {
+  text-decoration: underline;
 }
 
 /* Länkar */
@@ -274,22 +321,6 @@ a:hover {
   width: 100%;
 }
 
-/* Färgeffekt på titeln */
-.color-effect[data-astro-cid-j7pv25f6] {
-  font-family: var(--font-heading);
-  font-size: var(--h1);
-  letter-spacing: 0;
-  font-weight: 700;
-  background: linear-gradient(
-    120deg,
-    var(--primary-color),
-    var(--accent-color)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* Knapp-container i hero section*/
 .hero-buttons {
   margin-top: 2rem;
@@ -312,21 +343,6 @@ a:hover {
 
 .fact-text {
   text-align: center;
-}
-
-.fact-color-effect[data-astro-cid-j7pv25f6] {
-  font-family: var(--font-heading);
-  font-size: var(--h2);
-  letter-spacing: 0;
-  font-weight: 700;
-  background: linear-gradient(
-    120deg,
-    var(--primary-color),
-    var(--accent-color)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .fact-grid {
@@ -359,22 +375,6 @@ a:hover {
   padding-left: 2rem;
   text-align: center;
   border-bottom: 1px solid var(--secondary-color);
-}
-
-.history-color-effect[data-astro-cid-j7pv25f6] {
-  font-family: var(--font-heading);
-  font-size: var(--h1);
-  letter-spacing: 0;
-  font-weight: 700;
-  background: linear-gradient(
-    120deg,
-    var(--primary-color),
-    var(--accent-color)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1rem !important;
 }
 
 .om-katter-intro {
@@ -480,67 +480,12 @@ a:hover {
   transition: 0.3s;
 }
 
-.cat-color-effect[data-astro-cid-j7pv25f6] {
-  font-family: var(--font-heading);
-  font-size: var(--h2);
-  letter-spacing: 0;
-  font-weight: 700;
-  background: linear-gradient(
-    120deg,
-    var(--primary-color),
-    var(--accent-color)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 0;
-}
-
 /* ----- Om katter slut ----- */
 
 /* --------------------- MARIA CSS ---------------------- */
 /* --- Inledning --- */
-/*.intro {
-  background: linear-gradient(
-    160deg,
-    var(--primary-color),
-    var(--accent-color)
-  );
-  max-width: 60rem;
-  margin: 2rem auto;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  text-align: center;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1);
-
-  .intro p {
-  max-width: 35rem;
-  margin: 0 auto 1rem auto;
-  padding: 0, 5rem;
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-}*/
-
 .introHeading {
   text-align: center;
-}
-
-.textblock {
-  max-width: 50rem; /* ~800px */
-  margin: 2rem auto;
-  padding: 1rem;
-  text-align: center;
-  border-top: 1px solid var(--secondary-color);
-}
-
-.textblock p {
-  font-size: 1.1rem;
-}
-.textblock a {
-  text-decoration: underline;
 }
 /* ---------KATTRASER-------- */
 /* Wrapper korten */
@@ -595,25 +540,6 @@ a:hover {
 }
 /* ---------SKÖTSEL-------- */
 /* --- Blockstyling ---*/
-
-/* Grid för de två första blocken 
-.block-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  max-width: 50rem;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-/* Responsivt: stapla blocken på små skärmar 
-@media (max-width: 48rem) {
-  .block-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Block */
 .block {
   max-width: 50rem; /* samma maxbredd som intro */
   margin: 2rem auto;
