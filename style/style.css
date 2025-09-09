@@ -234,6 +234,8 @@ a:hover {
 
 /* --------------------- ELLA CSS ---------------------- */
 
+/* ----- Startsida ----- */
+
 /* Hero section */
 .hero {
   display: flex;
@@ -345,6 +347,119 @@ a:hover {
   padding: 10px;
   border-radius: 10px;
 }
+
+/* ----- Startsida slut ----- */
+
+/* ----- Om katter ----- */
+
+.history {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.om-katter-intro {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.timeline-horizontal {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 3rem 0;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  flex: 1;
+  padding: 0 1rem;
+  background-color: var(--brighter-secondary-color);
+  border-radius: 0.5rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.timeline-item h3 {
+  margin-top: 1.5rem;
+  color: var(--font-heading);
+}
+
+.timeline-item p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Tabell */
+
+.cat-table {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.cat-table h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.cat-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.cat-table thead {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 0.5rem;
+}
+
+.cat-table th,
+.cat-table td {
+  border: 1px solid var(--brighter-secondary-color);
+  padding: 1rem;
+  text-align: left;
+}
+
+.cat-table tr:nth-child(even) {
+  background-color: var(--brighter-secondary-color);
+  color: var(--text-color);
+}
+
+.cat-table tr:nth-child(odd) {
+  background-color: var(--secondary-color);
+}
+
+.cat-table tr:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+/* ----- Om katter slut ----- */
 
 /* --------------------- MARIA CSS ---------------------- */
 /* Ingress */
