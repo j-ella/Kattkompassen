@@ -462,8 +462,8 @@ a:hover {
 /* ----- Om katter slut ----- */
 
 /* --------------------- MARIA CSS ---------------------- */
-/* Ingress */
-.intro {
+/* --- Inledning --- */
+/*.intro {
   background: linear-gradient(
     160deg,
     var(--primary-color),
@@ -476,13 +476,8 @@ a:hover {
   text-align: center;
   border-radius: 0.5rem;
   box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1);
-}
 
-.introHeading {
-  text-align: center;
-}
-
-.intro p {
+  .intro p {
   max-width: 35rem;
   margin: 0 auto 1rem auto;
   padding: 0, 5rem;
@@ -490,8 +485,13 @@ a:hover {
   font-size: 1.1rem;
   line-height: 1.7;
 }
+}*/
 
-.outro {
+.introHeading {
+  text-align: center;
+}
+
+.textblock {
   max-width: 50rem; /* ~800px */
   margin: 2rem auto;
   padding: 1rem;
@@ -499,10 +499,10 @@ a:hover {
   border-top: 1px solid var(--secondary-color);
 }
 
-.outro p {
+.textblock p {
   font-size: 1.1rem;
 }
-.outro a {
+.textblock a {
   text-decoration: underline;
 }
 /* ---------KATTRASER-------- */
@@ -575,7 +575,7 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
-  
+
 /* Block */
 .block {
   max-width: 50rem; /* samma maxbredd som intro */
