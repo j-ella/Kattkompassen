@@ -29,6 +29,48 @@
         </div>
       </div>
     </header>
+    <main class="contact">
+
+      <!-- Ingress -->
+      <h2 class="introHeading">Kom i <span class="h2-color-effect"
+        data-astro-cid-j7pv25f6= >kontakt</span> med <span class="h2-color-effect"
+        data-astro-cid-j7pv25f6= >Kattkompassen</span></h2>
+      <div class="textblock">
+        <p>
+          Har du frågor eller vill komma i kontakt med oss på Kattkompassen? Här hittar du våra uppgifter. 
+          Du kan också anmäla dig till vårt nyhetsbrev för att få tips och inspiration direkt till din inkorg.
+        </p>
+      </div>
+      <div class="contact-grid">
+        <!-- Kontaktinfo -->
+        <div class="block">
+          <h2>Kontaktuppgifter</h2>
+          <ul>
+            <li><strong>Telefon:</strong> 070-123 45 67</li>
+            <li><strong>E-post:</strong> info@kattkompassen.se</li>
+            <li><strong>Organisationsnummer:</strong> 123456-7890</li>
+          </ul>
+        </div>
+    
+        <!-- Nyhetsbrev -->
+        <div class="block">
+          <h2>Prenumerera på nyhetsbrevet</h2>
+          <form id="newsletter-form">
+            <label for="email">Fyll i din e-postadress:</label><br>
+            <input type="email" id="email" name="email" placeholder="namn@example.com" required>
+            <button type="submit" class="btn button-primary">Registrera</button>
+          </form>
+        </div>
+      </div>  
+    </main>
+    <!-- Tack-meddelande i popup -->
+    <div id="success-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>🐾 Tack för din registrering 🐾 </h3>
+        <p>Du är nu anmäld till vårt nyhetsbrev</p>
+      </div>
+    </div>
 
     <footer class="footer-custom">
       <div class="footer-container">
@@ -58,5 +100,6 @@
         </div>
       </div>
     </footer>
+    <script src="/js/script.js"></script>
   </body>
 </html>
