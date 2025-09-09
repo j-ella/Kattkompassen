@@ -557,7 +557,8 @@ a:hover {
   }
 }
 /* ---------SKÖTSEL-------- */
-/* === Blockstyling === */
+/* --- Blockstyling ---*/
+
 /* Grid för de två första blocken 
 .block-grid {
   display: grid;
@@ -574,8 +575,7 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
-
-
+  
 /* Block */
 .block {
   max-width: 50rem; /* samma maxbredd som intro */
@@ -605,7 +605,7 @@ a:hover {
   line-height: 1.6;
 }
 
-/* === Tabellstyling === */
+/* --- Tabellstyling --- 
 table {
   width: 100%;
   border-collapse: collapse;
@@ -632,3 +632,4 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   background: #f1f1f1;
 }
+*/
