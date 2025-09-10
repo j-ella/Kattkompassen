@@ -674,7 +674,7 @@ a:hover {
 /* ---------SKÖTSEL-------- */
 /* --- Blockstyling ---*/
 .block {
-  max-width: 50rem; /* samma maxbredd som intro */
+  max-width: 50rem;
   margin: 2rem auto;
   padding: 1.5rem;
   background: #fff;
@@ -715,6 +715,32 @@ a:hover {
 
 .contact-grid ul {
   list-style: none;
+}
+
+.blockContact {
+  max-width: 40rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.08);
+}
+.blockContact h2 {
+  text-align: center;
+  margin-top: 0;
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+.blockContact h3 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.blockContact ul {
+  padding-left: 1.2rem;
+  margin: 1rem 0;
+  line-height: 1.6;
 }
 
 /* Form-element */
