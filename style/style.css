@@ -621,6 +621,9 @@ a:hover {
   margin: 2rem auto;
   padding-right: 2rem;
   padding-left: 2rem;
+}
+
+.adoption-container h2{
   text-align: center;
 }
 
