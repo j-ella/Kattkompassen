@@ -603,13 +603,13 @@ a:hover {
   height: 250px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-grid img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* ---- Galleri slut ----- */
@@ -623,12 +623,12 @@ a:hover {
   padding-left: 2rem;
 }
 
-.adoption-container h2{
+.adoption-container h2 {
   text-align: center;
 }
 
 iframe {
- margin: 0 auto;
+  margin: 0 auto;
 }
 
 /* ---- Adoptera slut ----- */
@@ -711,7 +711,6 @@ iframe {
 .block h3 {
   margin-top: 1.5rem;
   font-size: 1.2rem;
-  /*color: var(--primary-color);*/
 }
 
 .block ul {
@@ -774,6 +773,22 @@ input[type="email"] {
   border-radius: 0.25rem;
   font-size: 1rem;
 }
+/* Checkbox */
+.checkbox-container {
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.error-message {
+  color: #d9534f; /* röd */
+  font-size: 0.85rem;
+  margin: 0.25rem 0 0 0;
+}
 
 /* Responsivt: stapla blocken på små skärmar */
 @media (max-width: 48rem) {
@@ -782,7 +797,7 @@ input[type="email"] {
   }
 }
 
-/* --- Popup confimation --- */
+/* --- Popup bekräftelse --- */
 .modal {
   display: none;
   position: fixed;

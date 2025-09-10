@@ -2,30 +2,48 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("newsletter-form");
   const modal = document.getElementById("success-modal");
   const closeBtn = document.querySelector(".close-btn");
+  const consent = document.getElementById("consent");
+  const errorMsg = document.getElementById("consent-error");
 
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
+  if (!form) return;
 
-      // visa modal
-      modal.style.display = "flex";
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-      // töm fältet
-      form.reset();
+    // Dölj tidigare fel om synligt
+    if (errorMsg) errorMsg.style.display = "none";
+
+    // Kontrollera att checkbox finns och är ikryssad
+    if (!consent || !consent.checked) {
+      if (errorMsg) {
+        errorMsg.style.display = "block";
+        errorMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+      if (consent) consent.focus();
+      return;
+    }
+
+    // Allt ok — visa modal och nollställ formuläret
+    if (modal) modal.style.display = "flex";
+    form.reset();
+  });
+
+  // Dölj felmeddelandet direkt när användaren kryssar i rutan
+  if (consent && errorMsg) {
+    consent.addEventListener("change", () => {
+      if (consent.checked) errorMsg.style.display = "none";
     });
   }
 
-  // stäng på X
+  // Stäng modal på X
   if (closeBtn) {
     closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
+      if (modal) modal.style.display = "none";
     });
   }
 
-  // stäng om man klickar utanför modal-content
+  // Stäng modal när man klickar utanför innehållet
   window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
+    if (modal && e.target === modal) modal.style.display = "none";
   });
 });

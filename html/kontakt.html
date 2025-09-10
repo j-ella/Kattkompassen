@@ -11,6 +11,7 @@
     />
   </head>
   <body>
+    <!-- Header -->
      <header class="header-custom">
       <div class="header-container">
         <a href="Start.html">
@@ -30,7 +31,6 @@
       </div>
     </header>
     <main class="contact">
-
       <!-- Ingress -->
       <h2 class="introHeading">Kom i <span class="h2-color-effect"
         data-astro-cid-j7pv25f6= >kontakt</span> med <span class="h2-color-effect"
@@ -58,6 +58,18 @@
           <form id="newsletter-form">
             <label for="email">Fyll i din e-postadress:</label><br>
             <input type="email" id="email" name="email" placeholder="namn@example.com" required>
+            <!-- checkbox villkor och policys -->
+            <div class="checkbox-container">
+              <input type="checkbox" id="consent" name="consent">
+              <label for="consent">
+                <em>Jag godkänner Kattkompassens <a href="#">villkor</a> och 
+                <a href="#">integritetspolicy</a>.</em>
+              </label>
+            </div>
+            <!-- Felmeddelande -->
+            <p id="consent-error" class="error-message" style="display:none;">
+              <em>Du måste godkänna villkor och policy innan du kan registrera dig.</em>
+            </p>
             <button type="submit" class="btn button-primary">Registrera</button>
           </form>
         </div>
@@ -71,7 +83,7 @@
         <p>Du är nu anmäld till vårt nyhetsbrev</p>
       </div>
     </div>
-
+    <!-- Footer -->
     <footer class="footer-custom">
       <div class="footer-container">
         <div id="logo-footer">
