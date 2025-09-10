@@ -612,8 +612,23 @@ a:hover {
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* ---- Galleri ----- */
+/* ---- Galleri slut ----- */
 
+/* ---- Adoptera slut ----- */
+
+.adoption-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  text-align: center;
+}
+
+iframe {
+ margin: 0 auto;
+}
+
+/* ---- Adoptera slut ----- */
 
 /* --------------------- MARIA CSS ---------------------- */
 /* --- Inledning --- */
