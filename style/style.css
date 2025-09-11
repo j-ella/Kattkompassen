@@ -219,6 +219,7 @@ a:hover {
   height: 82.5px;
 }
 
+
 .burger {
   position: relative;
   width: 40px;
@@ -304,36 +305,6 @@ a:hover {
   /* Visa hamburgare */
   .burger {
     display: block;
-  }
-}
-
-/* -------- MEDIA QUERIES -------- */
-
-/* 📱 Under 1050px */
-@media (max-width: 1050px) {
-  .nav-links {
-    display: none; /* Dölj vanliga länkar */
-    flex-direction: column;
-    gap: 1rem;
-    background-color: var(--brighter-secondary-color);
-    position: absolute;
-    top: 70px;
-    right: 0;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  }
-
-  .nav-links.active {
-    display: flex; /* visa när man klickat på menyn */
-  }
-
-  .menu-toggle {
-    display: block; /* Visa hamburgaren */
-  }
-
-  .nav-container {
-    margin-left: 0; /* Justera centrering */
   }
 }
 
@@ -883,9 +854,9 @@ a:hover {
 .responsive-map {
   display: block;
   margin: 0 auto;
-  width: 100%;       /* Tar alltid full bredd */
-  max-width: 800px;  /* Begränsar till originalstorlek */
-  height: auto;      /* Höjd styrs via aspect-ratio */
+  width: 100%; /* Tar alltid full bredd */
+  max-width: 800px; /* Begränsar till originalstorlek */
+  height: auto; /* Höjd styrs via aspect-ratio */
   aspect-ratio: 16 / 9; /* Standardförhållande */
   border-radius: 0.25rem;
 }
