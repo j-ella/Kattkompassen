@@ -614,7 +614,7 @@ a:hover {
 
 /* ---- Galleri slut ----- */
 
-/* ---- Adoptera slut ----- */
+/* ---- Adoptera ----- */
 
 .adoption-container {
   max-width: 1000px;
@@ -629,6 +629,29 @@ a:hover {
 
 iframe {
   margin: 0 auto;
+}
+
+/* Laptop (1260px–900px): gör kartan lite lägre */
+@media (max-width: 1260px) and (min-width: 900px) {
+  .map-container {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* Tablet (900px–768px): bredare men inte för hög */
+@media (max-width: 900px) and (min-width: 768px) {
+  .map-container {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* Mobil (under 768px): nästan fyrkantig */
+@media (max-width: 768px) {
+  .map-container {
+    aspect-ratio: 1 / 1; /* kvadratisk */
+    max-width: 100%; /* ta hela bredden */
+    border-radius: 0.25rem; /* lite mindre rundning */
+  }
 }
 
 /* ---- Adoptera slut ----- */
@@ -684,11 +707,35 @@ iframe {
   margin: 1rem 0 0 0;
 }
 
-@media (max-width: 48rem) {
+/* @media (max-width: 48rem) {
   .raser {
-    grid-template-columns: 1fr; /* ett kort per rad på mindre skärmar */
+    grid-template-columns: 1fr; /* ett kort per rad på mindre skärmar
   }
 }
+*/
+
+/* Laptop (1260px–900px): */
+@media (max-width: 1260px) and (min-width: 900px) {
+  .raser {
+    gap: 1.5rem;
+  }
+}
+
+/* Tablet (900px–768px): 2 kolumner, men smalare */
+@media (max-width: 900px) and (min-width: 768px) {
+  .raser {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Mobil (under 900px): 1 kolumn */
+@media (max-width: 900px) {
+  .raser {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------SKÖTSEL-------- */
 /* --- Blockstyling ---*/
 .block {
@@ -717,6 +764,35 @@ iframe {
   padding-left: 1.2rem;
   margin: 1rem 0;
   line-height: 1.6;
+}
+
+/* Laptop (1260px–900px): kompakt block */
+@media (max-width: 1260px) and (min-width: 900px) {
+  .block {
+    padding: 1.25rem;
+  }
+}
+
+/* Tablet (900px–768px): block lite smalare */
+@media (max-width: 900px) and (min-width: 768px) {
+  .block {
+    margin: 1.5rem auto;
+    padding: 1rem;
+  }
+}
+
+/* Mobil (under 900px): block staplas och tabellen blir scrollbar */
+@media (max-width: 900px) {
+  .block {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
 
 /* ---------KONTAKTA OSS-------- */
@@ -790,12 +866,12 @@ input[type="email"] {
   margin: 0.25rem 0 0 0;
 }
 
-/* Responsivt: stapla blocken på små skärmar */
+/* Responsivt: stapla blocken på små skärmar 
 @media (max-width: 48rem) {
   .contact-grid {
     grid-template-columns: 1fr;
   }
-}
+} */
 
 /* --- Popup bekräftelse --- */
 .modal {
@@ -860,5 +936,25 @@ input[type="email"] {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+/* Laptop (1260px–900px): mindre gap */
+@media (max-width: 1260px) and (min-width: 900px) {
+  .contact-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Tablet (900px–768px): blocken smalare */
+@media (max-width: 900px) and (min-width: 768px) {
+  .contact-grid {
+    gap: 1rem;
+  }
+}
+
+/* Mobil (under 900px): block staplas */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }
