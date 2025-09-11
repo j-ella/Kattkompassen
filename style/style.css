@@ -812,30 +812,35 @@ a:hover {
   text-align: center;
 }
 
-iframe {
+.responsive-map {
+  display: block;
   margin: 0 auto;
+  width: 100%;       /* Tar alltid full bredd */
+  max-width: 800px;  /* Begränsar till originalstorlek */
+  height: auto;      /* Höjd styrs via aspect-ratio */
+  aspect-ratio: 16 / 9; /* Standardförhållande */
+  border-radius: 0.25rem;
 }
 
-/* Laptop (1260px–900px): gör kartan lite lägre */
+/* Laptop (1260px–900px): något kortare */
 @media (max-width: 1260px) and (min-width: 900px) {
-  .map-container {
+  .responsive-map {
     aspect-ratio: 16 / 10;
   }
 }
 
-/* Tablet (900px–768px): bredare men inte för hög */
+/* Tablet (900px–768px): lite fyrkantigare */
 @media (max-width: 900px) and (min-width: 768px) {
-  .map-container {
+  .responsive-map {
     aspect-ratio: 4 / 3;
   }
 }
 
-/* Mobil (under 768px): nästan fyrkantig */
+/* Mobil (under 768px): nästan kvadratisk */
 @media (max-width: 768px) {
-  .map-container {
-    aspect-ratio: 1 / 1; /* kvadratisk */
-    max-width: 100%; /* ta hela bredden */
-    border-radius: 0.25rem; /* lite mindre rundning */
+  .responsive-map {
+    aspect-ratio: 1 / 1;
+    max-width: 100%;
   }
 }
 
