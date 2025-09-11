@@ -220,10 +220,50 @@ a:hover {
   height: 82.5px;
 }
 
+/* Hamburger-knappen (dold som standard) */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-dark);
+}
+
+/* -------- MEDIA QUERIES -------- */
+
+/* 📱 Under 1050px */
+@media (max-width: 1350px) {
+  .nav-links {
+    display: none; /* Dölj vanliga länkar */
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--brighter-secondary-color);
+    position: absolute;
+    top: 70px; /* under headern */
+    right: 0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  .nav-links.active {
+    display: flex; /* visa när man klickat på menyn */
+  }
+
+  .menu-toggle {
+    display: block; /* Visa hamburgaren */
+    
+  }
+
+  .nav-container {
+    margin-left: 0; /* Justera centrering */
+  }
+}
+
 /* footer css*/
 .footer-custom {
   bottom: 0;
-  /*position: fixed;*/
   width: 100%;
 }
 
@@ -279,6 +319,62 @@ a:hover {
   margin-top: 0.5rem;
 }
 
+/* Laptop (1260px–901px) */
+@media (max-width: 1260px) and (min-width: 901px) {
+  .footer-container {
+    width: 85%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #logo-footer {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Laptop & större tablets (1279px–769px) */
+@media (max-width: 1279px) and (min-width: 769px) {
+  .footer-container {
+    width: 85%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1.5rem;
+  }
+
+  #logo-footer {
+    display: none;
+  }
+
+  .footer-utforska,
+  .footer-hitta {
+    margin: 1rem;
+    text-align: center;
+  }
+}
+
+/* Mobil (under 768px) */
+@media (max-width: 768px) {
+  .footer-container {
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  /* Dölj loggan på mobil */
+  #logo-footer {
+    display: none;
+  }
+
+  .footer-utforska,
+  .footer-hitta {
+    margin: 1rem 0;
+  }
+}
+
 /* --------------------- ELLA CSS ---------------------- */
 
 /* ----- Startsida ----- */
@@ -328,6 +424,51 @@ a:hover {
   gap: 1rem;
 }
 
+/* -------- MEDIA QUERIES -------- */
+
+/* Laptop (1260px–900px) */
+@media (max-width: 1260px) and (min-width: 901px) {
+  .hero {
+    padding: 3rem;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    flex: 1.2;
+  }
+
+  .hero-logo {
+    flex: 0.8;
+  }
+}
+
+/* Mobil (under 900px) */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    flex: unset;
+  }
+
+  .hero-logo {
+    flex: unset;
+    max-width: 300px; /* mindre logga på mobil */
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: column; /* knapparna staplas */
+    gap: 1rem;
+  }
+}
+
 /* Fakta ruta */
 
 .fact {
@@ -362,6 +503,34 @@ a:hover {
   height: 100%;
   padding: 10px;
   border-radius: 10px;
+}
+
+/* -------- MEDIA QUERIES -------- */
+
+/* Laptop (1260px–900px) */
+@media (max-width: 1260px) and (min-width: 901px) {
+  .fact-grid {
+    grid-template-columns: 1fr 1fr; /* 2 kolumner */
+    column-gap: 2rem;
+    row-gap: 3rem;
+  }
+}
+
+/* Mobil (under 900px) */
+@media (max-width: 900px) {
+  .fact {
+    margin: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .fact-grid {
+    grid-template-columns: 1fr; /* 1 kolumn */
+    row-gap: 2rem;
+  }
+
+  .fact-content {
+    padding: 1rem;
+  }
 }
 
 /* ----- Startsida slut ----- */
@@ -425,6 +594,22 @@ a:hover {
 .timeline-item p {
   font-size: 0.95rem;
   line-height: 1.4;
+}
+
+/* Responsiv layout */
+@media (max-width: 900px) {
+  .timeline-horizontal {
+    flex-direction: column; /* Staplar items vertikalt */
+    gap: 1.5rem; /* Lite mindre gap mellan items */
+  }
+
+  .timeline-item::before {
+    display: none;
+  }
+
+  .timeline-item {
+    padding-left: 2.5rem; /* Lite padding för markören */
+  }
 }
 
 /* Tabell */
