@@ -34,7 +34,7 @@ body {
   padding: 0;
 }
 
-/* text styles */
+/* Text stil */
 h1 {
   font-family: var(--font-heading);
   font-size: var(--h1);
@@ -66,6 +66,8 @@ h5 {
   font-size: var(--h5);
   font-weight: 400;
 }
+
+/* Färg effekt */
 .h1-color-effect[data-astro-cid-j7pv25f6] {
   font-family: var(--font-heading);
   font-size: var(--h1);
@@ -97,6 +99,7 @@ h5 {
   line-height: 0;
 }
 
+/* Text stil */
 p,
 li,
 span {
@@ -180,6 +183,7 @@ a:hover {
   border-radius: var(--button-radius);
 }
 
+/* Header */
 .header-custom {
   border-bottom: 1px solid var(--secondary-color);
   padding: 0.5rem 0;
@@ -194,7 +198,7 @@ a:hover {
 }
 
 .nav-container {
-  position: relative; /* Viktigt för absolut-positionerade nav-links */
+  position: relative; 
 }
 
 .nav-links {
@@ -219,6 +223,7 @@ a:hover {
   height: 82.5px;
 }
 
+/* Hamburgarmeny */
 .burger {
   position: relative;
   width: 40px;
@@ -229,7 +234,7 @@ a:hover {
 }
 
 .burger {
-  display: none; /* Dölj checkboxen helt */
+  display: none; 
 }
 
 #burger {
@@ -291,8 +296,8 @@ a:hover {
 
 
 /* ---------------- MEDIA QUERIES ---------------- */
+
 @media (max-width: 1100px) {
-  /* Dölj nav-links initialt */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -307,17 +312,14 @@ a:hover {
     z-index: 50;
   }
 
-  /* Visa hamburger */
   .burger {
     display: block;
   }
 
-  /* Visa nav-links när checkbox är checkad */
   #burger:checked ~ .nav-links {
     display: flex;
   }
 
-  /* Länkar i dropdown */
   .nav-links a {
     padding: 0.5rem 1rem;
   }
@@ -335,7 +337,7 @@ a:hover {
   }
 }
 
-/* footer css*/
+/* Footer */
 .footer-custom {
   bottom: 0;
   width: 100%;
@@ -393,7 +395,8 @@ a:hover {
   margin-top: 0.5rem;
 }
 
-/* Laptop (1260px–901px) */
+/* ---------------- MEDIA QUERIES ---------------- */
+
 @media (max-width: 1260px) and (min-width: 901px) {
   .footer-container {
     width: 85%;
@@ -408,7 +411,6 @@ a:hover {
   }
 }
 
-/* Laptop & större tablets (1279px–769px) */
 @media (max-width: 1279px) and (min-width: 769px) {
   .footer-container {
     width: 85%;
@@ -428,7 +430,6 @@ a:hover {
   }
 }
 
-/* Mobil (under 768px) */
 @media (max-width: 768px) {
   .footer-container {
     width: 95%;
@@ -438,7 +439,6 @@ a:hover {
     padding: 1.5rem;
   }
 
-  /* Dölj loggan på mobil */
   #logo-footer {
     display: none;
   }
@@ -474,24 +474,23 @@ a:hover {
 }
 
 .hero-logo-circle {
-  background-color: var(--primary-color); /* primary-färgen */
+  background-color: var(--primary-color); 
   width: 100%;
   height: 100%;
-  border-radius: 50%; /* gör den rund */
+  border-radius: 50%; 
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; /* hamnar bakom katten */
+  z-index: 1; 
 }
 
 .hero-logo-img {
   position: relative;
-  z-index: 2; /* hamnar framför cirkeln */
+  z-index: 2; 
   height: 100%;
   width: 100%;
 }
 
-/* Knapp-container i hero section*/
 .hero-buttons {
   margin-top: 2rem;
   display: flex;
@@ -500,7 +499,6 @@ a:hover {
 
 /* -------- MEDIA QUERIES -------- */
 
-/* Laptop (1260px–900px) */
 @media (max-width: 1260px) and (min-width: 901px) {
   .hero {
     padding: 3rem;
@@ -516,7 +514,6 @@ a:hover {
   }
 }
 
-/* Mobil (under 900px) */
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -531,20 +528,19 @@ a:hover {
 
   .hero-logo {
     flex: unset;
-    max-width: 300px; /* mindre logga på mobil */
+    max-width: 300px; 
     width: 100%;
     margin: 0 auto;
   }
 
   .hero-buttons {
     justify-content: center;
-    flex-direction: column; /* knapparna staplas */
+    flex-direction: column;
     gap: 1rem;
   }
 }
 
 /* Fakta ruta */
-
 .fact {
   display: flex;
   align-items: center;
@@ -581,16 +577,14 @@ a:hover {
 
 /* -------- MEDIA QUERIES -------- */
 
-/* Laptop (1260px–900px) */
 @media (max-width: 1260px) and (min-width: 901px) {
   .fact-grid {
-    grid-template-columns: 1fr 1fr; /* 2 kolumner */
+    grid-template-columns: 1fr 1fr;
     column-gap: 2rem;
     row-gap: 3rem;
   }
 }
 
-/* Mobil (under 900px) */
 @media (max-width: 900px) {
   .fact {
     margin: 2rem;
@@ -598,7 +592,7 @@ a:hover {
   }
 
   .fact-grid {
-    grid-template-columns: 1fr; /* 1 kolumn */
+    grid-template-columns: 1fr; 
     row-gap: 2rem;
   }
 
@@ -673,7 +667,7 @@ a:hover {
 
 @media (max-width: 1000px) {
   .timeline-horizontal {
-    grid-template-columns: 1fr; /* ett kort per rad på mindre skärmar *//
+    grid-template-columns: 1fr; 
   }
 }
 
@@ -751,7 +745,7 @@ a:hover {
 }
 
 .behov-item {
-  position: relative; /* gör att ::before fäster vid kortet */
+  position: relative; 
   flex: 1 1 250px;
   padding: 1.5rem;
   background-color: var(--brighter-secondary-color);
@@ -793,7 +787,7 @@ a:hover {
 }
 
 .video-block {
-  max-width: 50rem; /* samma maxbredd som intro */
+  max-width: 50rem; 
   margin: 2rem auto;
   padding: 1.5rem;
   background: #fff;
@@ -804,10 +798,10 @@ a:hover {
 .video-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 ratio */
+  padding-bottom: 56.25%; 
   height: 0;
   overflow: hidden;
-  max-width: 1000px; /* maxbredd på laptop */
+  max-width: 1000px; 
   margin: 0 auto;
 }
 
@@ -815,8 +809,8 @@ a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;   /* fyller hela container */
-  height: 100%;  /* fyller hela container */
+  width: 100%;
+  height: 100%;
   border: 0;
 }
 
@@ -882,28 +876,27 @@ a:hover {
 .responsive-map {
   display: block;
   margin: 0 auto;
-  width: 100%; /* Tar alltid full bredd */
-  max-width: 800px; /* Begränsar till originalstorlek */
-  height: auto; /* Höjd styrs via aspect-ratio */
-  aspect-ratio: 16 / 9; /* Standardförhållande */
+  width: 100%; 
+  max-width: 800px; 
+  height: auto; 
+  aspect-ratio: 16 / 9; 
   border-radius: 0.25rem;
 }
 
-/* Laptop (1260px–900px): något kortare */
+/* ---------------- MEDIA QUERIES ---------------- */
+
 @media (max-width: 1260px) and (min-width: 900px) {
   .responsive-map {
     aspect-ratio: 16 / 10;
   }
 }
 
-/* Tablet (900px–768px): lite fyrkantigare */
 @media (max-width: 900px) and (min-width: 768px) {
   .responsive-map {
     aspect-ratio: 4 / 3;
   }
 }
 
-/* Mobil (under 768px): nästan kvadratisk */
 @media (max-width: 768px) {
   .responsive-map {
     aspect-ratio: 1 / 1;
@@ -970,15 +963,14 @@ a:hover {
   }
 }
 */
+/* ---------------- MEDIA QUERIES ---------------- */
 
-/* Laptop (1260px–900px): */
 @media (max-width: 1260px) and (min-width: 900px) {
   .raser {
     gap: 1.5rem;
   }
 }
 
-/* Tablet (900px–768px): 2 kolumner, men smalare */
 @media (max-width: 900px) and (min-width: 768px) {
   .raser {
     grid-template-columns: repeat(2, 1fr);
@@ -986,7 +978,6 @@ a:hover {
   }
 }
 
-/* Mobil (under 900px): 1 kolumn */
 @media (max-width: 900px) {
   .raser {
     grid-template-columns: 1fr;
@@ -1023,14 +1014,14 @@ a:hover {
   line-height: 1.6;
 }
 
-/* Laptop (1260px–900px): kompakt block */
+/* ---------------- MEDIA QUERIES ---------------- */
+
 @media (max-width: 1260px) and (min-width: 900px) {
   .block {
     padding: 1.25rem;
   }
 }
 
-/* Tablet (900px–768px): block lite smalare */
 @media (max-width: 900px) and (min-width: 768px) {
   .block {
     margin: 1.5rem auto;
@@ -1038,7 +1029,6 @@ a:hover {
   }
 }
 
-/* Mobil (under 900px): block staplas och tabellen blir scrollbar */
 @media (max-width: 900px) {
   .block {
     margin: 1rem auto;
@@ -1118,7 +1108,7 @@ input[type="email"] {
 }
 
 .error-message {
-  color: #d9534f; /* röd */
+  color: #d9534f; 
   font-size: 0.85rem;
   margin: 0.25rem 0 0 0;
 }
@@ -1195,21 +1185,20 @@ input[type="email"] {
     transform: scale(1);
   }
 }
-/* Laptop (1260px–900px): mindre gap */
+/* ---------------- MEDIA QUERIES ---------------- */
+
 @media (max-width: 1260px) and (min-width: 900px) {
   .contact-grid {
     gap: 1.5rem;
   }
 }
 
-/* Tablet (900px–768px): blocken smalare */
 @media (max-width: 900px) and (min-width: 768px) {
   .contact-grid {
     gap: 1rem;
   }
 }
 
-/* Mobil (under 900px): block staplas */
 @media (max-width: 900px) {
   .contact-grid {
     grid-template-columns: 1fr;
