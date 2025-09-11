@@ -11,13 +11,19 @@
     />
   </head>
   <body>
-    <!-- Header -->
     <header class="header-custom">
       <div class="header-container">
         <a href="Start.html">
-          <img id="logo-header" src="/Images/header_logo.PNG" alt="logotyp"
-        /></a>
+          <img id="logo-header" src="/Images/header_logo.PNG" alt="logotyp" />
+        </a>
         <div class="nav-container">
+    
+          <input type="checkbox" id="burger">
+          <label class="burger" for="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
           <nav class="nav-links">
             <a href="omKatter.html">Om Katter</a>
             <a href="kattraser.html">Raser</a>
@@ -26,6 +32,7 @@
             <a href="galleri.html">Galleri</a>
             <a href="adoptering.html">Adoptera</a>
             <a href="kontakt.html">Kontakta oss</a>
+            <label for="burger" class="close">&times;</label>
           </nav>
         </div>
       </div>
