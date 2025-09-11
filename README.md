@@ -41,4 +41,5 @@ Projektet uppfyller de krav som ställts i uppgiften:
 
 ## 🚀 Publicering
 
-Projektet kan köras genom att öppna `html/Start.html` i en webbläsare.
+Projektet finns publicerat på GitHub Pages:  
+👉 [Länk till webbplatsen](https://j-ella.github.io/Kattkompassen/)  
