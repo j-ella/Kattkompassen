@@ -180,7 +180,6 @@ a:hover {
   border-radius: var(--button-radius);
 }
 
-/* header css*/
 .header-custom {
   border-bottom: 1px solid var(--secondary-color);
   padding: 0.5rem 0;
@@ -195,7 +194,7 @@ a:hover {
 }
 
 .nav-container {
-  margin-left: 15rem;
+  position: relative; /* Viktigt för absolut-positionerade nav-links */
 }
 
 .nav-links {
@@ -220,33 +219,92 @@ a:hover {
   height: 82.5px;
 }
 
-/* -------- MEDIA QUERIES -------- */
 
-/* Under 1050px */
-@media (max-width: 1350px) {
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: var(--primary-color);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+
+
+/* ---------------- MEDIA QUERIES ---------------- */
+@media (max-width: 1050px) {
+  /* Dölj vanliga länkar */
   .nav-links {
-    display: none; /* Dölj vanliga länkar */
+    display: none !important;
     flex-direction: column;
     gap: 1rem;
-    background-color: var(--brighter-secondary-color);
     position: absolute;
-    top: 70px; /* under headern */
+    top: 70px;
     right: 0;
+    background-color: var(--brighter-secondary-color);
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   }
 
+  /* Visa menyn när aktiv */
   .nav-links.active {
-    display: flex; /* visa när man klickat på menyn */
+    display: flex;
   }
 
-  .menu-toggle {
-    display: block; /* Visa hamburgaren */
-  }
-
-  .nav-container {
-    margin-left: 0; /* Justera centrering */
+  /* Visa hamburgare */
+  .burger {
+    display: block;
   }
 }
 
@@ -542,17 +600,18 @@ a:hover {
 }
 
 .timeline-horizontal {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex-wrap: wrap;
   justify-content: space-between;
-  position: relative;
   margin: 3rem 0;
-  padding: 2rem 0;
   gap: 2rem;
 }
 
 .timeline-item {
   position: relative;
-  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 0 1rem;
   background-color: var(--brighter-secondary-color);
   border-radius: 0.5rem;
@@ -585,21 +644,12 @@ a:hover {
   line-height: 1.4;
 }
 
-/* Responsiv layout */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .timeline-horizontal {
-    flex-direction: column; /* Staplar items vertikalt */
-    gap: 1.5rem; /* Lite mindre gap mellan items */
-  }
-
-  .timeline-item::before {
-    display: none;
-  }
-
-  .timeline-item {
-    padding-left: 2.5rem; /* Lite padding för markören */
+    grid-template-columns: 1fr; /* ett kort per rad på mindre skärmar *//
   }
 }
+
 
 /* Tabell */
 
