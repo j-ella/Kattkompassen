@@ -1,97 +1,98 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontakt</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <a href="#mainContent" class="skipLink">Skip to main content</a>
   <header class="header-custom">
-      <div class="header-container">
-        <a href="../index.html">
-          <img id="logo-header" src="../Images/header_logo.PNG" alt="logotyp" />
-        </a>
-        <div class="nav-container">
-    
-          <input type="checkbox" id="burger">
-          <label class="burger" for="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-          <nav class="nav-links">
-            <a href="omKatter.html">Om Katter</a>
-            <a href="kattraser.html">Raser</a>
-            <a href="kattensBehov.html">Behov</a>
-            <a href="skotselHalsa.html">Skötsel</a>
-            <a href="galleri.html">Galleri</a>
-            <a href="adoptering.html">Adoptera</a>
-            <a href="kontakt.html">Kontakta oss</a>
-            <label for="burger" class="close">&times;</label>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <main class="contact">
-      <!-- Ingress -->
-      <h2 class="introHeading">Kom i <span class="h2-color-effect"
-        data-astro-cid-j7pv25f6= >kontakt</span> med <span class="h2-color-effect"
-        data-astro-cid-j7pv25f6= >Kattkompassen</span></h2>
-      <div class="textblock">
-        <p>
-          Har du frågor eller vill komma i kontakt med oss på Kattkompassen? Här hittar du våra uppgifter. 
-          Du kan också anmäla dig till vårt nyhetsbrev för att få tips och inspiration direkt till din inkorg.
-        </p>
-      </div>
-      <div class="contact-grid">
-        <!-- Kontaktinfo -->
-        <div class="blockContact">
-          <h2>Kontaktuppgifter</h2>
-          <ul>
-            <li><strong>Telefon:</strong> 070-123 45 67</li>
-            <li><strong>E-post:</strong> info@kattkompassen.se</li>
-            <li><strong>Organisationsnummer:</strong> 123456-7890</li>
-          </ul>
-        </div>
-    
-        <!-- Nyhetsbrev -->
-        <div class="blockContact">
-          <h2>Prenumerera på nyhetsbrevet</h2>
-          <form id="newsletter-form">
-            <label for="email">Fyll i din e-postadress:</label><br>
-            <input type="email" id="email" name="email" placeholder="namn@example.com" required>
-            <!-- checkbox villkor och policys -->
-            <div class="checkbox-container">
-              <input type="checkbox" id="consent" name="consent">
-              <label for="consent">
-                <em>Jag godkänner Kattkompassens <a href="#">villkor</a> och 
-                <a href="#">integritetspolicy</a>.</em>
-              </label>
-            </div>
-            <!-- Felmeddelande -->
-            <p id="consent-error" class="error-message" style="display:none;">
-              <em>Du måste godkänna villkor och policy innan du kan registrera dig.</em>
-            </p>
-            <button type="submit" class="btn button-primary">Registrera</button>
-          </form>
-        </div>
-      </div>  
-    </main>
-    <!-- Tack-meddelande i popup -->
-    <div id="success-modal" class="modal">
-      <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h3>🐾 Tack för din registrering 🐾 </h3>
-        <p>Du är nu anmäld till vårt nyhetsbrev</p>
+    <div class="header-container">
+      <a href="../index.html">
+        <img id="logo-header" src="../Images/header_logo.PNG" alt="logotyp" />
+      </a>
+      <div class="nav-container">
+
+        <input type="checkbox" id="burger">
+        <label class="burger" for="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="nav-links">
+          <a href="omKatter.html">Om Katter</a>
+          <a href="kattraser.html">Raser</a>
+          <a href="kattensBehov.html">Behov</a>
+          <a href="skotselHalsa.html">Skötsel</a>
+          <a href="galleri.html">Galleri</a>
+          <a href="adoptering.html">Adoptera</a>
+          <a href="kontakt.html">Kontakta oss</a>
+          <label for="burger" class="close">&times;</label>
+        </nav>
       </div>
     </div>
-    <!-- Footer -->
-    <footer class="footer-custom">
+  </header>
+  <main class="contact">
+    <!-- Ingress -->
+    <h1 id="mainContent" class="introHeading">Kom i <span class="h2-color-effect"
+        data-astro-cid-j7pv25f6=>kontakt</span> med <span class="h2-color-effect"
+        data-astro-cid-j7pv25f6=>Kattkompassen</span></h1>
+    <div class="textblock">
+      <p>
+        Har du frågor eller vill komma i kontakt med oss på Kattkompassen? Här hittar du våra uppgifter.
+        Du kan också anmäla dig till vårt nyhetsbrev för att få tips och inspiration direkt till din inkorg.
+      </p>
+    </div>
+    <div class="contact-grid">
+      <!-- Kontaktinfo -->
+      <div class="blockContact">
+        <h2>Kontaktuppgifter</h2>
+        <ul>
+          <li><strong>Telefon:</strong> 070-123 45 67</li>
+          <li><strong>E-post:</strong> info@kattkompassen.se</li>
+          <li><strong>Organisationsnummer:</strong> 123456-7890</li>
+        </ul>
+      </div>
+
+      <!-- Nyhetsbrev -->
+      <div class="blockContact">
+        <h2>Prenumerera på nyhetsbrevet</h2>
+        <form id="newsletter-form">
+          <label for="email">Fyll i din e-postadress:</label><br>
+          <input type="email" id="email" name="email" placeholder="namn@example.com" required>
+          <!-- checkbox villkor och policys -->
+          <div class="checkbox-container">
+            <input type="checkbox" id="consent" name="consent">
+            <label for="consent">
+              <em>Jag godkänner Kattkompassens <a href="#">villkor</a> och
+                <a href="#">integritetspolicy</a>.</em>
+            </label>
+          </div>
+          <!-- Felmeddelande -->
+          <p id="consent-error" class="error-message" style="display:none;">
+            <em>Du måste godkänna villkor och policy innan du kan registrera dig.</em>
+          </p>
+          <button type="submit" class="btn button-primary">Registrera</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <!-- Tack-meddelande i popup -->
+  <div id="success-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>🐾 Tack för din registrering 🐾 </h3>
+      <p>Du är nu anmäld till vårt nyhetsbrev</p>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="footer-custom">
     <div class="footer-container">
       <div id="logo-footer">
         <a href="../index.html">
@@ -100,7 +101,7 @@
       <div class="footer-utforska">
         <ul>
           <h4>Utforska</h4>
-           <li><a href="omKatter.html">Om Katter</a></li>
+          <li><a href="omKatter.html">Om Katter</a></li>
           <li><a href="kattraser.html">Kattraser</a></li>
           <li><a href="kattensBehov.html">Kattens Behov</a></li>
           <li><a href="skotselHalsa.html">Skötsel och Hälsa</a></li>
@@ -118,6 +119,7 @@
       </div>
     </div>
   </footer>
-    <script src="../js/script.js"></script>
-  </body>
+  <script src="../js/script.js"></script>
+</body>
+
 </html>
